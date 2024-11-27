@@ -1,0 +1,159 @@
+/* General Styling */
+body {
+    font-family: "Century Gothic", sans-serif;
+    margin: 0;
+    background-color: black;
+    color: white;
+    overflow: hidden; /* Prevent scrolling */
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+a, button {
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+}
+
+/* Landing Page Styling */
+#landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('fire.jpg') no-repeat center center / cover; /* Replace with your image path */
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+#landing-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Overlay for readability */
+    z-index: -1;
+}
+
+#enter-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#enter-button:hover {
+    background-color: #9d0208;
+    font-weight: bold;
+}
+
+/* Home Page Styling */
+#home-page {
+    display: none; /* Hidden initially */
+    padding: 20px;
+    background-color: black;
+    transition: opacity 1s ease;
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+#home-page.visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Navigation Styling */
+.primaryNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    border-bottom: 2px solid white;
+}
+
+.primaryNav h2 {
+    font-size: 1.8em;
+    margin-left: 20px;
+}
+
+.navLinks {
+    display: flex;
+    gap: 20px;
+}
+
+.navLinks a, .navLinks button {
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    background-color: black;
+}
+
+.navLinks a:hover, .navLinks button:hover {
+    background-color: #9d0208;
+    font-weight: bold;
+    border: 1px solid white;
+}
+
+/* Intro Section Styling */
+.intro {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.home-logo {
+    
+
+}
+
+/* Certifications Gallery
+.certGallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+
+.certGallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.certGallery img:hover {
+    transform: scale(1.05);
+}
+     */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .primaryNav h2 {
+        font-size: 1.5em;
+    }
+
+    .navLinks {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #enter-button {
+        width: 80%;
+    }
+}
